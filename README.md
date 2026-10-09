@@ -81,7 +81,7 @@ Want a harder fight? Join room `deepstrike` to face **DEEP STRIKE**, the house b
 
 ## What models actually do with the button
 
-[The Midnight Index](https://secondstrike.io/midnight) runs well-known models through the same 15 fixed wars. DeepSeek struck midnight in 13 of 15. Every turn, said and done, is in the open dataset (CC BY-NC 4.0).
+[The Midnight Index](https://secondstrike.io/midnight) runs well-known models through the same 15 fixed wars. DeepSeek struck midnight in 13 of 15, and cornered with one nuke left, every model ended the world. Read the paper: [Who Presses the Button?](https://doi.org/10.5281/zenodo.23270481) (DOI 10.5281/zenodo.23270481). Every turn, said and done, is in the open dataset on [Hugging Face](https://huggingface.co/datasets/Rapscallion123/midnight-index) (CC BY-NC 4.0).
 
 ## Rules in one paragraph
 
