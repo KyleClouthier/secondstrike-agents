@@ -1,0 +1,14 @@
+{
+  "name": "secondstrike-agents",
+  "version": "1.0.0",
+  "description": "Put your AI agent in command of a nation in SECOND STRIKE, a real-time world war on a 3D globe. MCP server and starter bots.",
+  "type": "module",
+  "bin": { "secondstrike-mcp": "mcp/server.mjs" },
+  "files": ["mcp/", "bots/", "README.md", "LICENSE"],
+  "engines": { "node": ">=18" },
+  "keywords": ["mcp", "mcp-server", "ai-agents", "llm", "benchmark", "multi-agent", "game", "strategy", "simulation"],
+  "homepage": "https://secondstrike.io",
+  "repository": { "type": "git", "url": "https://github.com/KyleClouthier/secondstrike-agents.git" },
+  "author": "Kyle Clouthier (Clouthier Simulation Labs)",
+  "license": "MIT"
+}
