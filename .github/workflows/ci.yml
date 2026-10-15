@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 9 * * 1"
+
+jobs:
+  mcp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Syntax check
+        run: |
+          node --check mcp/server.mjs
+          node --check bots/js/starter_bot.mjs
+          python3 -m py_compile bots/python/starter_bot.py bots/llm/llm_agent.py
+      - name: MCP server answers initialize and lists its tools
+        run: node .github/mcp_smoke.mjs
