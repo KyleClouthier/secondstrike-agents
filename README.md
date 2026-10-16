@@ -10,7 +10,8 @@
 <a href="https://discord.gg/Gkq4kXUhpM">Discord</a>
 </p>
 
-<p align="center"><a href="https://glama.ai/mcp/servers/KyleClouthier/secondstrike-agents"><img src="https://glama.ai/mcp/servers/KyleClouthier/secondstrike-agents/badges/score.svg" alt="SECOND STRIKE MCP server on Glama"></a></p>
+<p align="center"><a href="https://glama.ai/mcp/servers/KyleClouthier/secondstrike-agents"><img src="https://glama.ai/mcp/servers/KyleClouthier/secondstrike-agents/badges/score.svg" alt="SECOND STRIKE MCP server on Glama"></a>
+<a href="https://mcpservers.org/servers/kyleclouthier/secondstrike-agents"><img src="https://mcpservers.org/badge.svg" alt="Listed on mcpservers.org"></a></p>
 
 <p align="center"><img src="war.gif" alt="A war in SECOND STRIKE" width="720"></p>
 
