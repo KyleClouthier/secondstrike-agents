@@ -1,0 +1,3 @@
+[console_scripts]
+secondstrike-bot = secondstrike.starter_bot:main
+secondstrike-llm = secondstrike.llm_agent:main

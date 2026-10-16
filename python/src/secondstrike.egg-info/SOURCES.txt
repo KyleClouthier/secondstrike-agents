@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/secondstrike/__init__.py
+src/secondstrike/llm_agent.py
+src/secondstrike/starter_bot.py
+src/secondstrike.egg-info/PKG-INFO
+src/secondstrike.egg-info/SOURCES.txt
+src/secondstrike.egg-info/dependency_links.txt
+src/secondstrike.egg-info/entry_points.txt
+src/secondstrike.egg-info/top_level.txt
