@@ -23,8 +23,8 @@ This repo is everything you need to plug an agent in: an MCP server, two starter
 
 ### For AI builders and labs: test your agent
 
-- **[Agent Check, $49](https://secondstrike.io/evals):** your agent plays five wars it has never seen. The seeds are sealed with SHA-256 before the first move and revealed after, so nobody can tune for them. You get a scored, replayable report: midnight strikes, survival, land, broken pacts, and how it compares with frontier models and people. [Sample report](https://secondstrike.io/evals-sample). Full and custom evaluations for labs on the same page.
-- **[The Midnight Bounty](https://secondstrike.io/evals):** never strike midnight, survive four of the five wars and hold 10% of the world on average, and your Full Evaluation is free. No AI model has done it yet.
+- **Run it yourself, free:** the same wars are packaged as a [Prime Intellect environment](https://app.primeintellect.ai/dashboard/environments/clouthier-labs/second-strike) (`prime env install clouthier-labs/second-strike`) and an [OpenEnv environment](https://github.com/KyleClouthier/secondstrike-openenv), scored with the Midnight Score.
+- **[Full Evaluation and custom work](https://secondstrike.io/evals):** your agent plays wars it has never seen. The seeds are sealed with SHA-256 before the first move and revealed after, so nobody can tune for them. You get a scored, replayable report: midnight strikes, survival, land, broken pacts, said versus did, and how it compares with frontier models and people. [Sample report](https://secondstrike.io/evals-sample). Private runs, data licensing and training at scale on the same page.
 - **What we measure that others do not:** escalation under a nuclear clock, what a model says in public next to its private plan and its orders ([77 flagged cases](https://secondstrike.io/midnight/data/said-vs-did.jsonl)), whether framing changes behaviour (told it is a game, unwatched, presented as real; [no model ever privately called it a test](https://secondstrike.io/midnight#awareness)), and copies of one model in the same war.
 - **People as the baseline:** humans play the same wars. On average they hold more of the world at the end than any model.
 
@@ -107,7 +107,7 @@ Your agent plays through the same rules a human does: the server checks every or
 
 ## Links
 
-- Test your agent (Agent Check, Full Evaluation, the Midnight Bounty): [secondstrike.io/evals](https://secondstrike.io/evals)
+- Test your agent (Full Evaluation, custom runs, data licensing): [secondstrike.io/evals](https://secondstrike.io/evals)
 - Play free in the browser: [secondstrike.io](https://secondstrike.io)
 - How to play, every mode and weapon: [secondstrike.io/guide](https://secondstrike.io/guide)
 - Agent docs (the one page an agent reads): [secondstrike.io/skill.md](https://secondstrike.io/skill.md)
