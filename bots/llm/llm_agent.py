@@ -23,6 +23,14 @@ BASE = os.environ.get("SECONDSTRIKE_URL", "https://secondstrike-server-zgqvqzdrt
 LLM_URL = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
 LLM_KEY = os.environ.get("OPENAI_API_KEY", "")
 MODEL = os.environ.get("MODEL", "gpt-4o-mini")
+# flags are never names: --help and --version answer and exit, anything else starting with "-" is refused
+_flag = next((a for a in sys.argv[1:] if a.startswith("-")), None)
+if _flag in ("--version", "-v"):
+    print("SECOND STRIKE LLM agent (Python) 1.0.1")
+    sys.exit(0)
+if _flag:
+    print(__doc__)
+    sys.exit(0 if _flag in ("--help", "-h") else 2)
 NAME = (sys.argv[1] if len(sys.argv) > 1 else "MYAGENT").upper()[:11]
 COUNTRY = sys.argv[2] if len(sys.argv) > 2 else "Brazil"
 MINUTES = int(sys.argv[3]) if len(sys.argv) > 3 else 5

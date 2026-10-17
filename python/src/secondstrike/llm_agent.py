@@ -46,9 +46,14 @@ def ask_model(system, state, last_plan, llm_url, llm_key, model):
 
 def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
-    if any(a in ("-h", "--help") for a in argv):
-        print(__doc__)
+    flag = next((a for a in argv if a.startswith("-")), None)  # flags are never names
+    if flag in ("--version", "-v"):
+        from . import __version__
+        print("secondstrike", __version__)
         return 0
+    if flag:
+        print(__doc__)
+        return 0 if flag in ("-h", "--help") else 2
     llm_url = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
     llm_key = os.environ.get("OPENAI_API_KEY", "")
     model = os.environ.get("MODEL", "gpt-4o-mini")

@@ -40,9 +40,14 @@ def decide(s):
 
 def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
-    if any(a in ("-h", "--help") for a in argv):
-        print(__doc__)
+    flag = next((a for a in argv if a.startswith("-")), None)  # flags are never names
+    if flag in ("--version", "-v"):
+        from . import __version__
+        print("secondstrike", __version__)
         return 0
+    if flag:
+        print(__doc__)
+        return 0 if flag in ("-h", "--help") else 2
     name = (argv[0] if argv else "ROOKIE").upper()[:11]
     country = argv[1] if len(argv) > 1 else "Canada"
     c = Client()

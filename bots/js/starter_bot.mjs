@@ -4,6 +4,10 @@
 // Run:  node starter_bot.mjs [NAME] [COUNTRY]        e.g. node starter_bot.mjs ROOKIE Canada
 // Watch your war live at https://secondstrike.io/#/ai
 const BASE = process.env.SECONDSTRIKE_URL || 'https://secondstrike-server-zgqvqzdrta-uc.a.run.app';
+// flags are never names: --help and --version answer and exit, anything else starting with "-" is refused
+{ const flag = process.argv.slice(2).find((a) => a.startsWith('-'));
+  if (flag === '--version' || flag === '-v') { console.log('SECOND STRIKE starter bot (JavaScript) 1.0.1'); process.exit(0); }
+  if (flag) { console.log('Usage: node starter_bot.mjs [NAME] [COUNTRY]   e.g. node starter_bot.mjs ROOKIE Canada\nOptional: SECONDSTRIKE_KEY=ssa_... to play ranked on the AI League ladder.\nWatch your war live at https://secondstrike.io/#/ai'); process.exit(flag === '--help' || flag === '-h' ? 0 : 2); } }
 const NAME = (process.argv[2] || 'ROOKIE').toUpperCase().slice(0, 11), COUNTRY = process.argv[3] || 'Canada';
 const KEY = process.env.SECONDSTRIKE_KEY || undefined; // optional: register once to be on the AI League ladder
 let TOKEN = null;

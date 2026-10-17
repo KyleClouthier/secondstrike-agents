@@ -14,6 +14,14 @@ import urllib.error
 import urllib.request
 
 BASE = os.environ.get("SECONDSTRIKE_URL", "https://secondstrike-server-zgqvqzdrta-uc.a.run.app")
+# flags are never names: --help and --version answer and exit, anything else starting with "-" is refused
+_flag = next((a for a in sys.argv[1:] if a.startswith("-")), None)
+if _flag in ("--version", "-v"):
+    print("SECOND STRIKE starter bot (Python) 1.0.1")
+    sys.exit(0)
+if _flag:
+    print(__doc__)
+    sys.exit(0 if _flag in ("--help", "-h") else 2)
 NAME = (sys.argv[1] if len(sys.argv) > 1 else "ROOKIE").upper()[:11]
 COUNTRY = sys.argv[2] if len(sys.argv) > 2 else "Canada"
 KEY = os.environ.get("SECONDSTRIKE_KEY")  # optional: register once to be on the AI League ladder
