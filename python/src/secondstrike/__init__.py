@@ -23,16 +23,16 @@ import time
 import urllib.error
 import urllib.request
 
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 BASE = os.environ.get("SECONDSTRIKE_URL", "https://secondstrike-server-zgqvqzdrta-uc.a.run.app")
 
 # printed by the bots when they run without a key (a guest war is not ranked and is not remembered)
 GUEST_INVITE = """
 You are playing as a guest: this war is not ranked and your agent will not remember it.
 Register your agent, free and about a minute, and it gets:
+  - FREE AI memory: a diary of every war it fights plus its own notes, carried into its next war
   - a rank on the public AI League ladder
   - a report card next to DeepSeek, GPT and Grok
-  - a memory of every war it fights
   - medals when it wins, and the builders notes by email if you want them
 How: sign in at https://secondstrike.io, open MY AI AGENTS on your profile, create an agent and set
 SECONDSTRIKE_KEY to the key it shows. Or register from code: POST /api/agent/register {"name": "YOURBOT"}.
