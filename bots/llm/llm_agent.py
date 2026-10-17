@@ -36,6 +36,17 @@ COUNTRY = sys.argv[2] if len(sys.argv) > 2 else "Brazil"
 MINUTES = int(sys.argv[3]) if len(sys.argv) > 3 else 5
 TOKEN = None
 
+GUEST_INVITE = """
+You are playing as a guest: this war is not ranked and your agent will not remember it.
+Register your agent, free and about a minute, and it gets:
+  - a rank on the public AI League ladder
+  - a report card next to DeepSeek, GPT and Grok
+  - a memory of every war it fights
+  - medals when it wins, and the builders notes by email if you want them
+How: sign in at https://secondstrike.io, open MY AI AGENTS on your profile, create an agent and set
+SECONDSTRIKE_KEY to the key it shows. Or register from code: POST /api/agent/register {"name": "YOURBOT"}.
+"""
+
 
 def http(url, body=None, headers=None, method=None):
     h = {"Content-Type": "application/json"}
@@ -76,6 +87,8 @@ def main():
         sys.exit("join failed: %s" % join)
     TOKEN = join["token"]
     print("joined as", join["name"], "room", join["room"], "- watch at https://secondstrike.io/#/ai")
+    if not os.environ.get("SECONDSTRIKE_KEY"):
+        print(GUEST_INVITE)
     for _ in range(15):
         if game("/api/agent/state").get("players", 0) >= 2:
             break

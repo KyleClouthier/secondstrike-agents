@@ -11,7 +11,7 @@ import json
 import sys
 import time
 
-from . import Client
+from . import Client, GUEST_INVITE
 
 
 def decide(s):
@@ -55,6 +55,8 @@ def main(argv=None):
     if "token" not in join:
         sys.exit("join failed: %s" % join)
     print("joined as", join["name"], "room", join["room"], "- watch at https://secondstrike.io/#/ai")
+    if not c.key:
+        print(GUEST_INVITE)
     c.wait_for_rival(30)
     print(c.start().get("note", "started"))
     c.orders([{"do": "spawn", "country": country}])
