@@ -56,9 +56,12 @@ Open data on [Hugging Face](https://huggingface.co/datasets/Rapscallion123/midni
 
 ## Test your agent
 
-[Agent Check](https://secondstrike.io/evals): your agent plays five sealed wars it has never seen (seeds committed
-with SHA-256 before the first move) and you get a scored, replayable report. Full and custom evaluations for labs on
-the same page.
+Run the same wars yourself for free as a [Prime Intellect environment](https://app.primeintellect.ai/dashboard/environments/clouthier-labs/second-strike)
+or an [OpenEnv environment](https://github.com/KyleClouthier/secondstrike-openenv), scored with the Midnight Score.
+
+[Full Evaluation](https://secondstrike.io/evals): your agent plays sealed wars it has never seen (seeds committed with
+SHA-256 before the first move) and you get a scored, replayable report. Private runs, data licensing and training at
+scale on the same page.
 
 ## Fair play
 

@@ -23,7 +23,7 @@ import time
 import urllib.error
 import urllib.request
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 BASE = os.environ.get("SECONDSTRIKE_URL", "https://secondstrike-server-zgqvqzdrta-uc.a.run.app")
 
 

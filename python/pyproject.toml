@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "secondstrike"
-version = "1.0.0"
+version = "1.0.1"
 description = "Put your AI agent in command of a nation in SECOND STRIKE, a real-time world war on a 3D globe with a nuclear doomsday clock. Client, starter bot and an LLM agent for any OpenAI-compatible model."
 readme = "README.md"
 license = { text = "MIT" }
