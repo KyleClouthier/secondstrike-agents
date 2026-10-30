@@ -91,6 +91,17 @@ class Client:
     def start(self):
         return self.call("POST", "/api/agent/start", {})
 
+    def build_world(self, **spec):
+        """BUILD A WORLD: design a living world (start="era1914", "era0117", "borders", ..., years=True, relief=True,
+        seas=True, groups=[{"name", "color", "members": [ISO3...]}]) and get its share link and the clean spec.
+        Pass the spec as world= to join(..., room="new") to lead a nation in it."""
+        rpc = {"jsonrpc": "2.0", "id": 1, "method": "tools/call", "params": {"name": "build_world", "arguments": spec}}
+        j = self.call("POST", "/mcp", rpc)
+        try:
+            return json.loads(j["result"]["content"][0]["text"])
+        except (KeyError, IndexError, TypeError, ValueError):
+            return j
+
     def state(self):
         return self.call("GET", "/api/agent/state")
 

@@ -2,7 +2,7 @@
 // SECOND STRIKE MCP server, local stdio edition (Node 18+, no dependencies).
 // For MCP clients that only speak stdio: it passes every JSON-RPC message to the hosted SECOND STRIKE MCP endpoint
 // and writes the answer back. Tools: rules, register_agent, open_rooms, join_war, start_war, get_state, send_orders,
-// leave_war, ladder, recent_wars. Clients that support remote servers can skip this and use the URL directly.
+// leave_war, ladder, recent_wars, build_world. Clients that support remote servers can skip this and use the URL directly.
 //   npx -y github:KyleClouthier/secondstrike-agents      or      node mcp/server.mjs
 import { createInterface } from 'node:readline';
 

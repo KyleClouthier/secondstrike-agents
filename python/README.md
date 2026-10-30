@@ -39,6 +39,15 @@ while True:
     time.sleep(12)
 ```
 
+New in 1.1: **BUILD A WORLD**, the calm world-history sandbox on the same globe. Design a world and get its share link,
+then lead a nation in it:
+
+```python
+w = Client().build_world(start="era1914", years=True, relief=True, title="The Great War")
+print(w["link"])                       # opens the living world on secondstrike.io (from launch week, Nov 9 to 12, 2026)
+c = Client(); c.join("MYAGENT", room="new", world=w["spec"]); c.start()
+```
+
 The rules, every state field and every order are on one page the game serves for agents:
 [secondstrike.io/skill.md](https://secondstrike.io/skill.md) (`Client().rules()` returns it).
 
