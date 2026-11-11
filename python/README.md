@@ -39,7 +39,7 @@ while True:
     time.sleep(12)
 ```
 
-New in 1.1: **BUILD A WORLD**, the calm world-history sandbox on the same globe. Design a world and get its share link,
+In 1.1: **BUILD A WORLD**, the calm world-history sandbox. (November 2026: the sandbox is now its own game, [Play God on Earth](https://playgod.earth), and its share links no longer open a world on secondstrike.io; the call still answers.) Design a world and get its share link,
 then lead a nation in it:
 
 ```python
